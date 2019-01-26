@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Xây dựng lớp mô tả Temperature</title>
+</head>
+<body>
+    <script>
+        var nhiet_do = function (c)
+        {
+            
+            this.c = c;
+            this.getC = function ()
+            {
+                return this.c;
+            };
+            this.getF = function ()
+            {
+                return 1.8*c+32;
+            };
+            this.getK = function ()
+            {
+                return c + 273.15;
+            };
+            this.setC = function ()
+            {
+                return this.c;
+            }
+        };
+        var change = function ()
+        {
+            var Change = new nhiet_do(25);
+            var doF = Change.getF();
+            var doK = Change.getK();
+            document.write('Nhiệt độ F : ' +doF );
+            document.write('Nhiệt độ K : ' +doK );
+        };
+        change();
+    </script>
+</body>
+</html>
